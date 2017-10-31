@@ -4,6 +4,7 @@ import {
     DrawerNavigator,
     StackNavigator
 } from 'react-navigation';
+import { Ionicons } from '@expo/vector-icons';
 
 import Stack1Screen from './Stack1Screen';
 import Stack2Screen from './Stack2Screen';
@@ -27,10 +28,17 @@ class DrawerItem1Screen extends React.Component {
 
     render() {
         return (
-            <Button
-                onPress={() => this.props.navigation.navigate('Notifications')}
-                title="Go to notifications"
-            />
+            <View style={{flex:1}}>
+                <View style={{flexDirection:'row', marginTop:30}}>
+                    <View style={{flex:1, marginLeft:20}}><Ionicons name="md-menu" size={32} color="green" /></View>
+                    <View style={{flex:1, alignItems:'center', justifyContent:'center'}}><Text style={{fontWeight:'bold', fontSize:15}}>CONVOS</Text></View>
+                    <View style={{flex:1, alignItems:'flex-end', marginRight:20}}><Ionicons name="md-more" size={32} color="gold"/></View>
+                </View>
+                <Button
+                    onPress={() => this.props.navigation.navigate('Notifications')}
+                    title="Go to notifications"
+                />
+            </View>
         );
     }
 }
