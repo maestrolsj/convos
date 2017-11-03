@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 
-
 export default class Stack1Screen extends React.Component {
 
     static navigationOptions = {
@@ -10,10 +9,15 @@ export default class Stack1Screen extends React.Component {
         drawerIcon: ({ tintColor }) => (
             <Image
                 source={require('../img/home.png')}
-                style={[styles.icon, {tintColor: tintColor}]}
+                style={[styles.icon, {tintColor: "gold"}]}
             />
         ),
     };
+
+    constructor(props){
+        super(props);
+
+    }
 
     render() {
         const { navigate } = this.props.navigation;
@@ -24,6 +28,7 @@ export default class Stack1Screen extends React.Component {
                    onPress={() => navigate('Stack2Screen', { user: 'Lucy' })}
                    title="Go to Second Screen"
                />
+
            </View>
 
         );
