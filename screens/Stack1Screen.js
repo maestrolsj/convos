@@ -23,7 +23,7 @@ export default class Stack1Screen extends React.Component {
         const { navigate } = this.props.navigation;
 
         return (
-           <View><Text>First Screen@!</Text>
+           <View><Text style={{backgroundColor:'gold'}}>First Screen@!</Text>
                <Button
                    onPress={() => navigate('Stack2Screen', { user: 'Lucy' })}
                    title="Go to Second Screen"

@@ -6,7 +6,7 @@ import {
     DrawerNavigator
 } from 'react-navigation';
 
-import Conversation from './screens/Conversation';
+import MainScreen from './screens/MainScreen';
 import Stack1Screen from './screens/Stack1Screen';
 import Stack2Screen from './screens/Stack2Screen';
 
@@ -56,7 +56,7 @@ export default class App extends React.Component {
 
       var Temp = DrawerNavigator({
               Home: {
-                  screen: Conversation,
+                  screen: MainScreen,
               },
               SimpleApp: {
                   screen: StackNavi,
@@ -68,6 +68,7 @@ export default class App extends React.Component {
               contentComponent: props =>{
                   return (
                       <View  style={{flex:1}}>
+                          
                           <Text style={{marginTop:40}}>CONVERSATION</Text>
                           <FlatList
                               data                  = {this.state.data}
